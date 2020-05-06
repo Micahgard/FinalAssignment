@@ -18,7 +18,7 @@ class Student
         $this->dbconn = (new DB())->conn;
     }
 
-    public function save($id, $name, $username, $password)
+    public function save()
     {
         if (is_null($this->id)) {
             $query = "insert into student values (null, '$this->name', '$this->username', '$this->password')";
