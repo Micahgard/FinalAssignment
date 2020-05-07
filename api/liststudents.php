@@ -1,0 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['admin_id'])){
+    include_once "class/Administrator.php";
+    $admin = new Administrator();
+    $students = $admin->showStudents();
+    $stds = json_encode($students);
+    echo $stds;
+}else{
+$mst = json_encode("you are not logged in");
+echo $msg;
+}

@@ -25,7 +25,7 @@ class Student
             echo $query;
             mysqli_query($this->dbconn, $query);
         } else {
-            $query = "Update student SET = '$this->name' where id = $this->id";
+            $query = "Update student SET name = '$this->name' where id = $this->id";
             mysqli_query($query);
         }
     }
